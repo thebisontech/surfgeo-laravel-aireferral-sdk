@@ -1,0 +1,56 @@
+{
+    "name": "surfgeo/laravel-aireferral-sdk",
+    "description": "Track AI bot traffic (ChatGPT, Claude, Perplexity) in Laravel applications",
+    "keywords": ["laravel", "ai", "bot", "tracking", "surfgeo", "analytics", "chatgpt", "claude", "perplexity"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "surfgeo",
+            "email": "support@surfgeo.com"
+        }
+    ],
+    "homepage": "https://github.com/thebisontech/surfgeo-laravel-aireferral-sdk",
+    "support": {
+        "issues": "https://github.com/thebisontech/surfgeo-laravel-aireferral-sdk/issues",
+        "source": "https://github.com/thebisontech/surfgeo-laravel-aireferral-sdk"
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "surfgeo\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "surfgeo\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "surfgeo\\Laravel\\surfgeoServiceProvider"
+            ],
+            "aliases": {
+                "surfgeo": "surfgeo\\Laravel\\Facades\\surfgeo"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+
